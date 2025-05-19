@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <img src="logo pl.png" alt="Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-card main">
+      <img src="petriheroicon.jpg" alt="Petri" />
+      <div class="hero-info">
+        <h3>Petri</h3>
+        <p>Tamperelainen kyberturvallisuusopiskelija</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Lyhyesti minusta</h3>
+      <p>
+        Syntynyt ja elänyt lähes koko elämän Tampereella, penkkiurheilu on lähellä sydäntä ja kannatan Ilvestä. 
+        Vapaa-ajalla mitä harvoin on käyn salilla, pelaan videopelejä, ulkoilen koirien kanssa sekä käyn 
+        erilaisissa tapahtumissa Tampereella sekä pääkaupunkiseudulla. Tavoitteenani on valmistua 
+        kyberturvallisuusasiantuntijaksi ja työskennellä alalla. Alla on luottokumppanit jotka pitävät elämän 
+        rikkaana ja jalat vetreinä. PS. Klikkaa koiria niin kuulet niiden äänet!
+      </p>
+    </div>
+    
+    
+
+  <div class="dog-rank-container">
+  <div class="dog-cards">
+    <div class="hero-card small">
+      <img src="Haades.jpg" alt="Haades" />
+      <div class="hero-info">
+        <h3>Haades</h3>
+        <p>Takuuvarma ölisijä ja rapinan tutkija</p>
+      </div>
+    </div>
+    <div class="hero-card small">
+      <img src="Nala.jpg" alt="Nala" />
+      <div class="hero-info">
+        <h3>Nala</h3>
+        <p>Sielultaan kypsynyt ja vannoutunut päiväunien ottaja</p>
+      </div>
+    </div>
+  </div>
+<div class="dota-rank-showcase">
+  
+
+    <div class="rank-label">
+      Esittääkseni päättäväisyyteni ja kykyjeni tasoa, olen saavuttanut parhaimman mahdollisen Dota 2 -rankin, Immortalin. Se on osoitus sitoutumisestani ja taidoistani pelissä.
+    </div>
+
+    <img src="immortal.png" alt="My Dota 2 Rank" class="my-rank" />
+    <img src="allranks.png" alt="All Ranks" class="rank-ladder" />
+  </div>
+</div>
+
+
+
+
+  </main>
+
+  <footer>
+    <p>Follow us on:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </p>
+    <p>&copy; 2025 Petri Lehto</p>
+  </footer>
+
+  <audio id="haades-audio" src="haadeshaukkuu.mp3" preload="auto"></audio>
+  <audio id="nala-audio" src="nalamurisee.m4a" preload="auto"></audio>
+
+  <script>
+    let soundEnabled = false;
+
+    document.addEventListener('click', () => {
+      soundEnabled = true;
+    });
+
+    const haadesCard = document.querySelectorAll('.hero-card.small')[0];
+    const nalaCard = document.querySelectorAll('.hero-card.small')[1];
+
+    const haadesAudio = document.getElementById('haades-audio');
+    const nalaAudio = document.getElementById('nala-audio');
+
+    haadesAudio.volume = 1;
+    nalaAudio.volume = 0.4;
+
+    let haadesCooldown = false;
+    let nalaCooldown = false;
+
+    haadesCard.addEventListener('click', () => {
+      if (soundEnabled && !haadesCooldown) {
+        haadesAudio.currentTime = 0;
+        haadesAudio.play();
+        haadesCooldown = true;
+        setTimeout(() => haadesCooldown = false, 1000);
+      }
+    });
+
+    nalaCard.addEventListener('click', () => {
+      if (soundEnabled && !nalaCooldown) {
+        nalaAudio.currentTime = 0;
+        nalaAudio.play();
+        nalaCooldown = true;
+        setTimeout(() => nalaCooldown = false, 1000);
+      }
+    });
+  </script>
+</body>
+</html>
