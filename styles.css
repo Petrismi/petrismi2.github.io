@@ -448,24 +448,31 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 15px; 
-    box-sizing: border-box;
+    padding: 20px;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-card.main img {
     width: 120px;
     border-right: none;
     border-bottom: 2px solid #ff1a1a;
+    margin-bottom: 15px;
   }
 
   .hero-card.main .hero-info {
-    padding: 15px;
+    padding: 0;
     width: 100%;
-    box-sizing: border-box;
-    overflow-wrap: break-word; 
-    word-break: break-word;
+  }
+
+  .hero-card.main .hero-info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .hero-card.main .hero-info p {
+    margin: 0 auto;
+    max-width: 90%;
+    line-height: 1.4;
   }
 }
-
-
