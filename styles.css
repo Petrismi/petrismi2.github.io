@@ -190,7 +190,7 @@ footer {
 
 .hero-card.main {
   flex: 1 1 300px;
-  max-width: 320px;
+  max-width: 100%;
   background: linear-gradient(to bottom right, #1a1a1a, #0d0d0d);
   border: 2px solid #ff1a1a;
   border-radius: 10px;
@@ -472,6 +472,8 @@ footer {
     flex-direction: row;
     align-items: center;
     text-align: left;
+    max-width: 100%;
+    margin: 20px 0;
   }
 
   .hero-card.main img {
