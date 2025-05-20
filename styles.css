@@ -424,7 +424,21 @@ footer {
 }
 @media (max-width: 600px) {
   .dota-rank-showcase {
-    margin-top: 3rem;
+    display: block;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    clear: both;
+  }
+
+  .dog-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-card.small {
+    width: 100%;
   }
 }
+
 
