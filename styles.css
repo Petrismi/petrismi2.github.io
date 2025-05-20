@@ -443,5 +443,22 @@ footer {
     max-width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .hero-card.main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-card.main img {
+    width: 120px;
+    border-right: none;
+    border-bottom: 2px solid #ff1a1a;
+  }
+
+  .hero-card.main .hero-info {
+    padding: 10px 15px;
+  }
+}
 
 
