@@ -461,6 +461,10 @@ footer {
 
   .hero-card.main .hero-info {
     padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
 
