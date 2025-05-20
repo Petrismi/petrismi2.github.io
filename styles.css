@@ -448,7 +448,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 15px;
+    padding: 15px; 
     box-sizing: border-box;
     width: 100%;
   }
@@ -460,10 +460,10 @@ footer {
   }
 
   .hero-card.main .hero-info {
-    padding: 10px 15px;
+    padding: 15px;
     width: 100%;
     box-sizing: border-box;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; 
     word-break: break-word;
   }
 }
