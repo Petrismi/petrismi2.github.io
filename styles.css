@@ -199,7 +199,9 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .hero-card.main:hover {
@@ -210,13 +212,15 @@ footer {
 .hero-card.main img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-bottom: 2px solid #ff1a1a;
   background-color: #000;
 }
 
 .hero-card.main .hero-info {
   padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-card.main .hero-info h3 {
@@ -232,9 +236,6 @@ footer {
   font-size: 0.9rem;
   line-height: 1.4;
 }
-
-
-
 
 .hero-row {
   display: flex;
