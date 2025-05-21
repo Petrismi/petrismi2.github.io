@@ -21,27 +21,24 @@ html, body {
 }
 .slideshow-container {
   max-width: 500px;
-  height: 400px; /* reduce from 600px if needed */
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background: #000;
+  background: #000; 
 }
 
 .slide {
   display: none;
-  width: 100%;
-  height: 100%;
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
+  display: block;
 }
-
 
 .prev, .next {
   cursor: pointer;
