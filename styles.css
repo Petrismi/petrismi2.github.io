@@ -21,9 +21,10 @@ html, body {
 }
 .slideshow-container {
   max-width: 500px;
-  margin: 0 auto;
+  height: 600px; 
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
   border-radius: 12px;
 }
 
