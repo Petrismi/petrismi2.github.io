@@ -18,21 +18,48 @@
         </nav>
     </header>
     <section class="hero-banner">
-        <img src="petrifinaal.jpg" alt=Petri Lehto" class="hero-img">
-  <h1>Tervetuloa verkkosivuilleni</h1>
-  <p>Kyberturvallisuusopiskelija</p>
-  <a href="about.html" class="btn">Meet the Heroes</a>
-</section>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/salikuva.jpg" alt="in the gym">
+    </div>
+    <div class="slide fade">
+      <img src="images/paintballp.jpg" alt="Paintballing">
+    </div>
+    <div class="slide fade">
+      <img src="images/petripuku.jpg" alt="petri puvussa">
+    </div>
+  </div>
 
+  <h1>Tervetuloa verkkosivuilleni</h1>
+  <a href="about.html" class="btn">Meet the Hero</a>
+</section>
    
 
     <footer>
         <p> Seuraa minua:
-            <a href="www.linkedin.com/in/petrismi">linkedIn</a>
+            <a href="https://www.linkedin.com/in/petrismi">linkedIn</a>
             
            
         </p>
         <p>&copy; 2025 Petri Lehto</p>
     </footer>
+    <script>
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName("slide");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000);
+  }
+
+  showSlides();
+</script>
 </body>
 </html>
