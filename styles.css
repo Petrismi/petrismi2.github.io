@@ -20,13 +20,16 @@ html, body {
   box-sizing: border-box;
 }
 .slideshow-container {
-  max-width: 500px;
+  max-width: 90%;
+  max-height: 80vh;  
+  aspect-ratio: 3 / 2; 
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background: #000; 
+  background: #000;
 }
+
 
 .slide {
   display: none;
