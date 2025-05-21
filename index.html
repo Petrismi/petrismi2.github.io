@@ -17,22 +17,25 @@
 <a href="contact.html" class="">Contact</a>
         </nav>
     </header>
-    <section class="hero-banner">
+   <section class="hero-banner">
   <div class="slideshow-container">
-    <div class="slide fade">
-      <img src="kuvat/salikuva.jpg" alt="in the gym">
+    <div class="slide">
+      <img src="kuvat/salikuva.jpg" alt="In the gym">
     </div>
-    <div class="slide fade">
+    <div class="slide">
       <img src="kuvat/paintballp.jpg" alt="Paintballing">
     </div>
-    <div class="slide fade">
-      <img src="kuvat/petripuku.jpg" alt="petri puvussa">
+    <div class="slide">
+      <img src="kuvat/petripuku.jpg" alt="Petri puvussa">
     </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
   </div>
 
   <h1>Tervetuloa verkkosivuilleni</h1>
   <a href="about.html" class="btn">Meet the Hero</a>
 </section>
+
    
 
     <footer>
@@ -44,22 +47,24 @@
         <p>&copy; 2025 Petri Lehto</p>
     </footer>
     <script>
-  let slideIndex = 0;
-  const slides = document.getElementsByClassName("slide");
+  let slideIndex = 1;
+  showSlide(slideIndex);
 
-  function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
+  function changeSlide(n) {
+    showSlide(slideIndex += n);
   }
 
-  showSlides();
+  function showSlide(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
 </script>
+
 </body>
 </html>
